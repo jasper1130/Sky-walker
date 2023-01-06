@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY WALKER|首頁</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+            <a class="shortcut" href="index.html"><img src="picture/logo.png" class="p1"></a>
+            <a class="shortcut" href="index.html">首頁</a>
+            <a class="shortcut" href="product.html">商品專區</a>
+            <a class="shortcut" href="member.html">會員專區</a>
+            <a class="shortcut" href="About us.html">關於我們</a>
+        </div>
+        <div class="logo">
+          <div class="logo-login">
+            <a href="Login.html"><img src="picture/vip.png" class="p2"></a>
+          </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <img src="picture/cart.png" class="p2">
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <div class="header">
+                  <h2>購物車</h2>
+                </div>   
+                <div class="row">
+                  <table class="cart-product">
+                    <tr>
+                        <th class="cart-kind">商品品項</th>
+                        <th class="cart-price">單價</th>
+                        <th class="cart-quantiity">數量</th>
+                        <th class="cart-total">總計</th>
+                        <th class="cart-revise">修改</th>
+                    </tr>
+                     <tr>
+                        <th class="product-kind"><img src="picture/hot1.jpg" class="p6">Logi G502 Hero 電競滑鼠</th>
+                        <th class="product-price">NT$1,490</th>
+                        <th class="product-quantiity">              
+                          <button id="num-jian" class="num-jian" onclick="minus(0)">-</button>
+                          <input type="text" class="input-num" id="input-num" value="1" />
+                          <button id="num-jia" class="num-jian" onclick="add(0)">+</button> 
+                        </th>
+                        <th class="product-total">NT$1,490</th>
+                        <th class="product-revise"><button class="cd-buttom" onclick="deleteTR()">刪除</button></th>
+                     </tr>
+                </table>
+                <table class="cart-product">
+                    <tr>
+                        <th class="product-kind"><img src="picture/hot2.png" class="p6">ASUS ROG Delta S Core</th>
+                        <th class="product-price">NT$2,890</th>
+                        <th class="product-quantiity">              
+                          <button id="num-jian" class="num-jian" onclick="minus(1)">-</button>
+                          <input type="text" class="input-num" id="input-num" value="1" />
+                          <button id="num-jia" class="num-jian" onclick="add(1)">+</button>
+                        </th>
+                        <th class="product-total">NT$5,780</th>
+                        <th class="product-revise"> <button @click=”handledelete(index)” class="cd-buttom">刪除</button></th>
+                    </tr>
+                  </table>
+                  <div>
+                    <a href="cart.html">
+                      <input type="submit" class="go-pay" value="去買單" >
+                    </a>               
+                  </div>
+                </div>
+              </div>
+            </div> 
+              <input class="search-container" type="text" placeholder="Search.." name="search">
+                  <button class="search_icon" type="submit">
+                    <img src="picture/search.png" height="100%">
+                  </button>
+        </div>        
+      </nav>
+    </header>
+    <main>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="picture/add1" class="p3">
+        </div>       
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="picture/add2" class="p3">
+        </div>       
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="picture/add3" class="p3">
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="picture/add4.jpg" class="p3">
+        </div>       
+      </div>
+      <br>       
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div>       
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3500); // Change image every 2 seconds
+        }
+        </script>
+        
+        <hr>
+        <section class="hotsell">
+            <!--熱門商品排行-->
+            <div class="hotsell-title">
+                熱門商品排行
+            </div>
+            <div class="hotsel">
+                <div class="hotsells">
+                    <img class="medal_img" src="" width="26%">
+                    <a href="Logi-mouse1.html">  <!--記得放入超連結-->
+                    <img src="picture/hot1.jpg" class="p4">
+                    <p class="prize"><img src="picture/1.jpg" width="35px">&ensp;Logi G502 Hero 電競滑鼠</p><hr>
+                    <b class="prize">NT$1,490&emsp;<span style="text-decoration: line-through;color: red;">$2,290</span></b>
+                    <p class="slogan">● HERO 25K 感應器● 11 個可自訂按鈕<br>● 可調校配重砝&emsp;&emsp;● LIGHTSYNC RGB</p>
+                </div>
+                <div class="hotsells">
+                    <img class="medal_img" src="" width="26%">
+                    <a href="ASUS-earphone1.html"> <!--記得放入超連結-->
+                    <img src="picture/hot2.png"class="p4">
+                    <p class="prize"><img src="picture/2.jpg" width="35px">&ensp;ASUS ROG Delta S Core</p><hr>
+                    <b class="prize">NT$2,890</b>
+                    <p class="slogan">極輕 3.5 mm 電競耳機，搭載 50 mm ASUS Essence 驅動單體、虛擬 7.1 環繞音效</p>
+                    </a>
+                </div>
+                <div class="hotsells">
+                    <img class="" width="26%">
+                    <a href="Razer-keyboard1.html"> <!--記得放入超連結-->
+                    <img src="picture/hot3.png" class="p4">
+                    <p class="prize"><img src="picture/3.jpg" width="35px">&ensp;RAZER DEATHSTALKER V2</p><hr>
+                    <b class="prize">NT$4,999</b>
+                    <p class="slogan">搭載 Razer Chroma™ RGB 功能的無線矮軸光學遊戲鍵盤&emsp;&ensp;● Razer™ 光學矮軸<br>● 頂級連線能力 ● 40小時超長電池續航力</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="product.js"></script>
+    <aside>
+      <a href="index.html">
+          <p class="aside5">TOP</p>
+      </a>
+    </aside>
+    <div class="copyright" id="Contact">
+        <footer>
+            <h5 class="copyright">Copyright © since 2022 SKYWALKER All Rights Reserved.</h5>
+            <h5 class="browseNum">網站瀏覽人數：1130 人</h5>
+            <h5 class="information">地址：桃園市中壢區中北路200號</h5>
+            <h5 class="information">服務時間：週一～週五 8:00AM~6:00PM</h5>
+            <h5 class="information">連絡電話：09XX-XXXX-XXXX</h5>
+        </footer>
+    </div>
+</body>
+</html>

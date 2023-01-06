@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>             
+    <button id="num-jian" class="num-jian" onclick="minus(0)">-</button>
+    <input type="text" class="input-num" id="input-num" value="1" />
+    <button id="num-jia" class="num-jian" onclick="add(0)">+</button> 
+
+        <button id="num-jian" class="num-jian" onclick="minus(1)">-</button>
+        <input type="text" class="input-num" id="input-num" value="1" />
+        <button id="num-jia" class="num-jian" onclick="add(1)">+</button>
+
+            <button id="num-jian" class="num-jian" onclick="minus(2)">-</button>
+            <input type="text" class="input-num" id="input-num" value="1" />
+            <button id="num-jia" class="num-jian" onclick="add(2)">+</button>
+            
+        
+        <!-- A[0]  = 1
+        A[1]  = 2
+        A[2]  = 3 -->
+
+        <script>
+            function add (num){
+                var add = Number(document.getElementsByClassName("input-num")[num].value);
+                if(add < 200){
+                    document.getElementsByClassName("input-num")[num].value = add + 1;
+                }
+                else{
+                    alert("商品數量不可大於200");
+                }
+            }
+            
+            function minus(num){
+                var minus = Number(document.getElementsByClassName("input-num")[num].value);
+                if(minus > 1){
+                    document.getElementsByClassName("input-num")[num].value = minus - 1;
+                }
+                else{
+                    window.alert("商品數量不可小於1");
+                }          
+            }
+            
+            // var num_jia = document.getElementById("num-jia");
+            // var num_jian = document.getElementById("num-jian");
+            // var input_num = document.getElementById("input-num");
+
+            // num_jia.onclick = function() {
+            //     input_num.value = parseInt(input_num.value) + 1;
+            // }
+
+            // num_jian.onclick = function() {
+            //     if(input_num.value <= 0) {
+            //     input_num.value = 0;
+            //     } 
+            //     else {
+            //         input_num.value = parseInt(input_num.value) - 1;
+            //     }
+            // }
+            
+        </script>
+</body>
+</html>

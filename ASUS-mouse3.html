@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>華碩 ASUS Marshmallow  MD100</title>
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a class="shortcut" href="index.html"><img src="picture/logo.png" class="p1"></a>
+                <a class="shortcut" href="index.html">首頁</a>
+                <a class="shortcut" href="product.html">商品專區</a>
+                <a class="shortcut" href="member.html">會員專區</a>
+                <a class="shortcut" href="About us.html">關於我們</a>
+            </div>
+            <div class="logo">
+              <div class="logo-login">
+                <a href="Login.html"><img src="picture/vip.png" class="p2"></a>
+              </div>
+                <div class="dropdown">
+                  <button class="dropbtn">
+                    <img src="picture/cart.png" class="p2">
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <div class="header">
+                      <h2>購物車</h2>
+                    </div>   
+                    <div class="row">
+                      <table class="cart-product">
+                        <tr>
+                            <th class="cart-kind">商品品項</th>
+                            <th class="cart-price">單價</th>
+                            <th class="cart-quantiity">數量</th>
+                            <th class="cart-total">總計</th>
+                            <th class="cart-revise">修改</th>
+                        </tr>
+                         <tr>
+                            <th class="product-kind"><img src="picture/hot1.jpg" class="p6">Logi G502 Hero 電競滑鼠</th>
+                            <th class="product-price">NT$1,490</th>
+                            <th class="product-quantiity">              
+                              <button id="num-jian" class="num-jian" onclick="minus(0)">-</button>
+                              <input type="text" class="input-num" id="input-num" value="1" />
+                              <button id="num-jia" class="num-jian" onclick="add(0)">+</button> 
+                            </th>
+                            <th class="product-total">NT$1,490</th>
+                            <th class="product-revise"><button class="cd-buttom" onclick="deleteTR()">刪除</button></th>
+                         </tr>
+                    </table>
+                    <table class="cart-product">
+                        <tr>
+                            <th class="product-kind"><img src="picture/hot2.png" class="p6">ASUS ROG Delta S Core</th>
+                            <th class="product-price">NT$2,890</th>
+                            <th class="product-quantiity">              
+                              <button id="num-jian" class="num-jian" onclick="minus(1)">-</button>
+                              <input type="text" class="input-num" id="input-num" value="1" />
+                              <button id="num-jia" class="num-jian" onclick="add(1)">+</button> 
+                            </th>
+                            <th class="product-total">NT$5,780</th>
+                            <th class="product-revise"> <button @click=”handledelete(index)” class="cd-buttom">刪除</button></th>
+                        </tr>
+                      </table>
+                      <div>
+                        <a href="cart.html">
+                          <input type="submit" class="go-pay" value="去買單" >
+                        </a>               
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                  <input class="search-container" type="text" placeholder="Search.." name="search">
+                      <button class="search_icon" type="submit">
+                        <img src="picture/search.png" height="100%">
+                      </button>
+            </div>        
+          </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Logi.html" class="brand">羅技Logi </a><hr>
+        <a href="Logi-mouse.html">滑鼠 </a>
+        <a href="Logi-keyboard.html">鍵盤 </a>
+        <a href="Logi-earphone.html">耳機 </a><hr>
+        <a href="ASUS.html"class="brand">華碩ASUS</a><hr>
+        <a href="ASUS-mouse.html">滑鼠 </a>
+        <a href="ASUS-keybpard.html">鍵盤 </a>
+        <a href="ASUS-earphone.html">耳機 </a><hr>
+        <a href="Razer.html"class="brand">雷蛇Razer</a><hr>
+        <a href="Razer-mouse.html">滑鼠 </a>
+        <a href="Razer-keyboard.html">鍵盤 </a>
+        <a href="Razer-earphone.html">耳機 </a><hr>
+    </div>
+      <span class="list" onclick="openNav()">&#9776; 商品選單</span>
+      
+    <script>
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <section>
+        <div class="product">
+            <div>
+                <img src="product/ASUS-mouse3.png" class="p5">
+            </div>
+            <h2 class="name">華碩 ASUS Marshmallow  MD100 <br>Steven Harrington 限定版</h2> <!--商品名字-->
+            <h2 class="name">NT$1,490 </h2> <!--商品價格-->
+            <p class="stock">庫存數量：999 </p><!--庫存數量-->
+            <div class="quantity">數量： <!--購買數量-->
+              <button id="num-jian" class="num-jian" onclick="minus(2)">-</button>
+              <input type="text" class="input-num" id="input-num" value="1" />
+              <button id="num-jia" class="num-jian" onclick="add(2)">+</button> 
+            </div>
+            <div>
+                <input type="submit" class="addcart" value="加入購物車" >
+            </div>
+        </div>
+        <div class="product">
+            <div>
+                <h1 class="introduction">商品介紹<hr></h1>
+                <b class="introduction1">可調式 DPI 可完整控制靈敏度，因應不同使用情境，任意切換 800、1000或  <br></b> 
+                <b class="introduction1">1600 dpi感應器解析度，提升工作效率。 此外，電競等級 100% PTFE 滑鼠腳<br></b> 
+                <b class="introduction1">，確保在任何表面皆可流暢滑動。雙模式無線連線功能支援 RF 2.4 GHz 和<br></b> 
+                <b class="introduction1">Bluetooth® 5.0，提供高資料傳輸速度以確保精準、無延遲的輸入。<br></b>
+                <b class="introduction1"></b>
+            </div>
+        </div>
+        <div class="product1">
+            <div>
+                <h1 class="introduction">商品評論<hr></h1>
+                <hr width="100%">
+                <div class="comment-userphoto">
+                    <img class="userphoto" src="picture/man.jpg" width="125px" height="125px">  <!--使用者圖片-->
+                </div>
+                <h3 class="username">史丹利</h3> <!--使用者姓名-->
+                <div class="star-mark">
+                  <ul class="star">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <div class="result"><span class="mark"></span><span class="detail"></span></div>
+                  <div class="help-info">
+                    <span class="mark"></span>&nbsp;<span class="decri"></span><br>
+                    <span class="detail"></span>
+                  </div>
+                </div>
+                <div>
+                <textarea class="review" rows="5" cols="70" placeholder="留下您對於商品的評論...." ></textarea><!-- 輸入評論-->   
+                </div>               
+                <input type="submit" class="buttonLOOK" value="留下評論" >
+                <!--寫死的留言板-->
+                <hr>
+            <!-- 範例評論開頭1 -->
+            <div class="comment-userphoto">
+                <img class="userphoto" src="picture/woman.jpg"
+                width="75px" height="75px">
+            </div>
+            <div class="username1">丁特</div>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
+                </div>
+                <p class="comment">2022-12-21 21:20:20<p>
+                <p class="comment">出貨速度快，商品包裝仔細且品項及數量正確無誤，顏色好看，使用感受流暢靈敏。</p><hr>
+                <!-- 範例評論開頭1 -->
+                <div class="comment-userphoto">
+                    <img class="userphoto" src="picture/man.jpg"
+                    width="75px" height="75px">
+                 </div>
+            <div class="username1">TOYZ</div>
+                <div class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
+                </div>
+                <p class="comment">2022-12-31 23:59:59 </p>
+                <p class="comment">很划算，下次如果有需要會在購買，老闆很有耐心都會仔細回答我的問題，謝謝老闆。</p>   
+            <!-- 範例評論結尾 -->
+            </div>
+        </div>
+    </section>
+    <script src="product.js"></script>
+    <div class="copyright" id="Contact">    
+        <footer>
+            <h5 class="copyright">Copyright © since 2022 SKYWALKER All Rights Reserved.</h5>
+            <h5 class="browseNum">網站瀏覽人數：1130 人</h5>
+            <h5 class="information">地址：桃園市中壢區中北路200號</h5>
+            <h5 class="information">服務時間：週一～週五 8:00AM~6:00PM</h5>
+            <h5 class="information">連絡電話：09XX-XXXX-XXXX</h5>
+        </footer>
+    </div>
+</body>
+</html>

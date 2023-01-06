@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羅技Logi|鍵盤</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a class="shortcut" href="index.html"><img src="picture/logo.png" class="p1"></a>
+                <a class="shortcut" href="index.html">首頁</a>
+                <a class="shortcut" href="product.html">商品專區</a>
+                <a class="shortcut" href="member.html">會員專區</a>
+                <a class="shortcut" href="About us.html">關於我們</a>
+            </div>
+            <div class="logo">
+              <div class="logo-login">
+                <a href="Login.html"><img src="picture/vip.png" class="p2"></a>
+              </div>
+                <div class="dropdown">
+                  <button class="dropbtn">
+                    <img src="picture/cart.png" class="p2">
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <div class="header">
+                      <h2>購物車</h2>
+                    </div>   
+                    <div class="row">
+                      <table class="cart-product">
+                        <tr>
+                            <th class="cart-kind">商品品項</th>
+                            <th class="cart-price">單價</th>
+                            <th class="cart-quantiity">數量</th>
+                            <th class="cart-total">總計</th>
+                            <th class="cart-revise">修改</th>
+                        </tr>
+                         <tr>
+                            <th class="product-kind"><img src="picture/hot1.jpg" class="p6">Logi G502 Hero 電競滑鼠</th>
+                            <th class="product-price">NT$1,490</th>
+                            <th class="product-quantiity">              
+                              <button id="num-jian" class="num-jian" onclick="minus(0)">-</button>
+                              <input type="text" class="input-num" id="input-num" value="1" />
+                              <button id="num-jia" class="num-jian" onclick="add(0)">+</button>
+                            </th>
+                            <th class="product-total">NT$1,490</th>
+                            <th class="product-revise"><button class="cd-buttom" onclick="deleteTR()">刪除</button></th>
+                         </tr>
+                    </table>
+                    <table class="cart-product">
+                        <tr>
+                            <th class="product-kind"><img src="picture/hot2.png" class="p6">ASUS ROG Delta S Core</th>
+                            <th class="product-price">NT$2,890</th>
+                            <th class="product-quantiity">              
+                              <button id="num-jian" class="num-jian" onclick="minus(1)">-</button>
+                              <input type="text" class="input-num" id="input-num" value="1" />
+                              <button id="num-jia" class="num-jian" onclick="add(1)">+</button>
+                            </th>
+                            <th class="product-total">NT$5,780</th>
+                            <th class="product-revise"> <button @click=”handledelete(index)” class="cd-buttom">刪除</button></th>
+                        </tr>
+                      </table>
+                      <div>
+                        <a href="cart.html">
+                          <input type="submit" class="go-pay" value="去買單" >
+                        </a>               
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                  <input class="search-container" type="text" placeholder="Search.." name="search">
+                      <button class="search_icon" type="submit">
+                        <img src="picture/search.png" height="100%">
+                      </button>
+            </div>        
+          </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Logi.html" class="brand">羅技Logi </a><hr>
+        <a href="Logi-mouse.html">滑鼠 </a>
+        <a href="Logi-keyboard.html">鍵盤 </a>
+        <a href="Logi-earphone.html">耳機 </a><hr>
+        <a href="ASUS.html"class="brand">華碩ASUS</a><hr>
+        <a href="ASUS-mouse.html">滑鼠 </a>
+        <a href="ASUS-keybpard.html">鍵盤 </a>
+        <a href="ASUS-earphone.html">耳機 </a><hr>
+        <a href="Razer.html"class="brand">雷蛇Razer</a><hr>
+        <a href="Razer-mouse.html">滑鼠 </a>
+        <a href="Razer-keyboard.html">鍵盤 </a>
+        <a href="Razer-earphone.html">耳機 </a><hr>
+      </div>
+      <span class="list" onclick="openNav()">&#9776; 商品選單</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    <section class="hotsell">
+        <!--熱門商品排行-->
+        <div class="hotsell-title">
+            羅技Logi/鍵盤
+        </div><hr>
+        <div class="hotsel">
+            <div class="hotsells">
+                <a href="Logi-keyboard1.html">  <!--記得放入超連結-->
+                <img src="product/Logi-keyboard1.jpg" class="p4">
+                <p class="prize">羅技 Logitech PRO X 電競鍵盤</p><hr>
+                <b class="prize">$4,690</b>
+                <p class="slogan">針對職業選手設計，具有精簡的無數字鍵台設計和可拆卸連接線。GX青軸敲擊感按鍵軸具有職業等級的效能、靈敏度和耐用度。</p>
+            </div>
+            <div class="hotsells">
+                <a href="Lazer-keyboard2.html"> <!--記得放入超連結-->
+                <img src="product/Logi-keyboard2.webp"class="p4">
+                <p class="prize">羅技 Logitech G813 RGB</p><hr>
+                <b class="prize">NT$3,990</b>
+                <p class="slogan">●USB轉接埠&emsp;&emsp;&emsp;&emsp;●G功能鍵<br>●3個內建設定檔&emsp;&emsp;&nbsp;●專用媒體控制鍵<br>●LIGHTSYNC RGB
+                    </p>
+                </a>
+            </div>
+            <div class="hotsells">
+                <a href="Lazer-keyboard3.html"> <!--記得放入超連結-->
+                <img src="product/Logi-keyboard3.webp" class="p4">
+                <p class="prize">羅技 Logitech G713</p><hr>
+                <b class="prize">NT$4,990</b>
+                <p class="slogan">G713 為 Aurora 精選組合產品之一，是一款精巧的有線 TKL 鍵盤，專為舒適性而設計，並隨附如雲朵般柔軟的手托。</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="product.js"></script>
+    <aside>
+      <a href="index.html">
+          <p class="aside4">HOME</p>
+      </a>
+      <a href="Logi-keyboard.html">
+          <p class="aside5">TOP</p>
+      </a>
+  </aside>
+    <div class="copyright" id="Contact">    
+        <footer>
+            <h5 class="copyright">Copyright © since 2022 SKYWALKER All Rights Reserved.</h5>
+            <h5 class="browseNum">網站瀏覽人數：1130 人</h5>
+            <h5 class="information">地址：桃園市中壢區中北路200號</h5>
+            <h5 class="information">服務時間：週一～週五 8:00AM~6:00PM</h5>
+            <h5 class="information">連絡電話：09XX-XXXX-XXXX</h5>
+        </footer>
+    </div>
+</body>
+</html>
