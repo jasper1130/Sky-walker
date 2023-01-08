@@ -7,7 +7,7 @@
     <title>SKY WALKER|商品專區</title>
     <link rel="stylesheet" href="text.css">
 </head>
-<body>
+<body id="main">
     <header>
         <nav>
             <div class="logo">
@@ -18,9 +18,9 @@
                 <a class="shortcut" href="About us.html">關於我們</a>
             </div>
             <div class="logo">
-              <div class="logo-login">
-                <a href="Login.html"><img src="picture/vip.png" class="p2"></a>
-              </div>
+                <div class="logo-login">
+                    <a href="Login.html"><img src="picture/vip.png" class="p2"></a>
+                </div>
                 <div class="dropdown">
                   <button class="dropbtn">
                     <img src="picture/cart.png" class="p2">
@@ -76,35 +76,28 @@
                       <button class="search_icon" type="submit">
                         <img src="picture/search.png" height="100%">
                       </button>
-            </div>        
+            </div> 
           </nav>
     </header>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="Logi.html" class="brand">羅技Logi </a><hr>
-        <a href="Logi-mouse.html">滑鼠 </a>
-        <a href="Logi-keyboard.html">鍵盤 </a>
-        <a href="Logi-earphone.html">耳機 </a><hr>
-        <a href="ASUS.html"class="brand">華碩ASUS</a><hr>
-        <a href="ASUS-mouse.html">滑鼠 </a>
-        <a href="ASUS-keybpard.html">鍵盤 </a>
-        <a href="ASUS-earphone.html">耳機 </a><hr>
-        <a href="Razer.html"class="brand">雷蛇Razer</a><hr>
-        <a href="Razer-mouse.html">滑鼠 </a>
-        <a href="Razer-keyboard.html">鍵盤 </a>
-        <a href="Razer-earphone.html">耳機 </a><hr>
-      </div>
-      <span class="list" onclick="openNav()">&#9776; 商品選單</span>
-      
-      <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-      </script>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Logi.html" class="brand">羅技Logi </a><hr>
+            <a href="Logi-mouse.html">滑鼠 </a>
+            <a href="Logi-keyboard.html">鍵盤 </a>
+            <a href="Logi-earphone.html">耳機 </a><hr>
+            <a href="ASUS.html"class="brand">華碩ASUS</a><hr>
+            <a href="ASUS-mouse.html">滑鼠 </a>
+            <a href="ASUS-keybpard.html">鍵盤 </a>
+            <a href="ASUS-earphone.html">耳機 </a><hr>
+            <a href="Razer.html"class="brand">雷蛇Razer</a><hr>
+            <a href="Razer-mouse.html">滑鼠 </a>
+            <a href="Razer-keyboard.html">鍵盤 </a>
+            <a href="Razer-earphone.html">耳機 </a><hr>
+        </div>    
+
+        <span class="list" onclick="openNav()">&#9776;  商品選單</span>
+
+
     <section class="hotsell">
         <!--熱門商品排行-->
         <div class="hotsell-title">

@@ -1,3 +1,15 @@
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.getElementById("main").style.marginLeft= "0";
+}
+
+
 function add (num){
     var add = Number(document.getElementsByClassName("input-num")[num].value);
     if(add < 200){
